@@ -1,0 +1,80 @@
+{
+  "about": "This is a Zest script. For more details about Zest visit https://github.com/zaproxy/zest/",
+  "zestVersion": "0.3",
+  "title": "CMD",
+  "description": "A template standalone script",
+  "prefix": "",
+  "type": "StandAlone",
+  "parameters": {
+    "tokenStart": "{{",
+    "tokenEnd": "}}",
+    "tokens": {},
+    "elementType": "ZestVariables"
+  },
+  "statements": [
+    {
+      "url": "https://localhost:7000/",
+      "data": "",
+      "method": "GET",
+      "headers": "DNT: 1\r\nUpgrade-Insecure-Requests: 1\r\nSec-Fetch-Dest: document\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-Site: none\r\nSec-Fetch-User: ?1\r\n",
+      "response": {
+        "url": "http://localhost:7000/",
+        "headers": "HTTP/1.0 200 OK\nContent-Type: text/html; charset\u003dutf-8\nContent-Length: 4069\nServer: Werkzeug/2.0.3 Python/3.7.8\nDate: Wed, 18 May 2022 09:26:17 GMT\n\n",
+        "body": "",
+        "statusCode": 200,
+        "responseTimeInMs": 4,
+        "elementType": "ZestResponse"
+      },
+      "assertions": [
+        {
+          "rootExpression": {
+            "code": 200,
+            "not": false,
+            "elementType": "ZestExpressionStatusCode"
+          },
+          "elementType": "ZestAssertion"
+        }
+      ],
+      "followRedirects": false,
+      "timestamp": 1652865977745,
+      "cookies": [],
+      "index": 1,
+      "enabled": true,
+      "elementType": "ZestRequest"
+    },
+    {
+      "url": "https://localhost:7000/home",
+      "data": "size\u003d50",
+      "method": "POST",
+      "headers": "Content-Type: application/x-www-form-urlencoded\r\nContent-Length: 7\r\nOrigin: https://localhost:7000\r\nDNT: 1\r\nUpgrade-Insecure-Requests: 1\r\nSec-Fetch-Dest: document\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-Site: same-origin\r\nSec-Fetch-User: ?1\r\n",
+      "response": {
+        "url": "http://localhost:7000/home",
+        "headers": "HTTP/1.0 200 OK\nContent-Type: text/html; charset\u003dutf-8\nContent-Length: 4161\nServer: Werkzeug/2.0.3 Python/3.7.8\nDate: Wed, 18 May 2022 09:26:19 GMT\nCache-Control: no-cache, no-store\n\n",
+        "body": "",
+        "statusCode": 200,
+        "responseTimeInMs": 8,
+        "elementType": "ZestResponse"
+      },
+      "assertions": [
+        {
+          "rootExpression": {
+            "code": 200,
+            "not": false,
+            "elementType": "ZestExpressionStatusCode"
+          },
+          "elementType": "ZestAssertion"
+        }
+      ],
+      "followRedirects": false,
+      "timestamp": 1652865979444,
+      "cookies": [],
+      "index": 2,
+      "enabled": true,
+      "elementType": "ZestRequest"
+    }
+  ],
+  "authentication": [],
+  "index": 0,
+  "enabled": true,
+  "elementType": "ZestScript"
+}

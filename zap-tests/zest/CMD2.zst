@@ -1,0 +1,170 @@
+{
+  "about": "This is a Zest script. For more details about Zest visit https://github.com/zaproxy/zest/",
+  "zestVersion": "0.3",
+  "title": "CMD2",
+  "description": "A template standalone script",
+  "prefix": "",
+  "type": "StandAlone",
+  "parameters": {
+    "tokenStart": "{{",
+    "tokenEnd": "}}",
+    "tokens": {},
+    "elementType": "ZestVariables"
+  },
+  "statements": [
+    {
+      "url": "https://localhost:7000/compress?log_type\u003daccess",
+      "data": "",
+      "method": "GET",
+      "headers": "DNT: 1\r\nUpgrade-Insecure-Requests: 1\r\nSec-Fetch-Dest: document\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-Site: same-origin\r\nSec-Fetch-User: ?1\r\n",
+      "response": {
+        "url": "http://localhost:7000/compress?log_type\u003daccess",
+        "headers": "HTTP/1.0 200 OK\nContent-Type: text/html; charset\u003dutf-8\nContent-Length: 4993\nServer: Werkzeug/2.0.3 Python/3.7.8\nDate: Wed, 18 May 2022 10:42:11 GMT\n\n",
+        "body": "",
+        "statusCode": 200,
+        "responseTimeInMs": 23,
+        "elementType": "ZestResponse"
+      },
+      "assertions": [
+        {
+          "rootExpression": {
+            "code": 200,
+            "not": false,
+            "elementType": "ZestExpressionStatusCode"
+          },
+          "elementType": "ZestAssertion"
+        }
+      ],
+      "followRedirects": false,
+      "timestamp": 1652870531002,
+      "cookies": [],
+      "index": 1,
+      "enabled": true,
+      "elementType": "ZestRequest"
+    },
+    {
+      "url": "https://localhost:7000/compress?log_type\u003derror",
+      "data": "",
+      "method": "GET",
+      "headers": "DNT: 1\r\nUpgrade-Insecure-Requests: 1\r\nSec-Fetch-Dest: document\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-Site: same-origin\r\nSec-Fetch-User: ?1\r\n",
+      "response": {
+        "url": "http://localhost:7000/compress?log_type\u003derror",
+        "headers": "HTTP/1.0 200 OK\nContent-Type: text/html; charset\u003dutf-8\nContent-Length: 4992\nServer: Werkzeug/2.0.3 Python/3.7.8\nDate: Wed, 18 May 2022 10:42:13 GMT\n\n",
+        "body": "",
+        "statusCode": 200,
+        "responseTimeInMs": 15,
+        "elementType": "ZestResponse"
+      },
+      "assertions": [
+        {
+          "rootExpression": {
+            "code": 200,
+            "not": false,
+            "elementType": "ZestExpressionStatusCode"
+          },
+          "elementType": "ZestAssertion"
+        }
+      ],
+      "followRedirects": false,
+      "timestamp": 1652870533493,
+      "cookies": [],
+      "index": 2,
+      "enabled": true,
+      "elementType": "ZestRequest"
+    },
+    {
+      "url": "https://localhost:7000/",
+      "data": "",
+      "method": "GET",
+      "headers": "DNT: 1\r\nUpgrade-Insecure-Requests: 1\r\nSec-Fetch-Dest: document\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-Site: none\r\nSec-Fetch-User: ?1\r\n",
+      "response": {
+        "url": "http://localhost:7000/",
+        "headers": "HTTP/1.0 200 OK\nContent-Type: text/html; charset\u003dutf-8\nContent-Length: 5259\nServer: Werkzeug/2.0.3 Python/3.7.8\nDate: Wed, 18 May 2022 10:42:17 GMT\n\n",
+        "body": "",
+        "statusCode": 200,
+        "responseTimeInMs": 3,
+        "elementType": "ZestResponse"
+      },
+      "assertions": [
+        {
+          "rootExpression": {
+            "code": 200,
+            "not": false,
+            "elementType": "ZestExpressionStatusCode"
+          },
+          "elementType": "ZestAssertion"
+        }
+      ],
+      "followRedirects": false,
+      "timestamp": 1652870537372,
+      "cookies": [],
+      "index": 3,
+      "enabled": true,
+      "elementType": "ZestRequest"
+    },
+    {
+      "url": "https://localhost:7000/viewer?lines\u003dblue",
+      "data": "",
+      "method": "GET",
+      "headers": "DNT: 1\r\nUpgrade-Insecure-Requests: 1\r\nSec-Fetch-Dest: document\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-Site: same-origin\r\nSec-Fetch-User: ?1\r\n",
+      "response": {
+        "url": "http://localhost:7000/viewer?lines\u003dblue",
+        "headers": "HTTP/1.0 200 OK\nContent-Type: text/html; charset\u003dutf-8\nContent-Length: 6815\nServer: Werkzeug/2.0.3 Python/3.7.8\nDate: Wed, 18 May 2022 10:42:22 GMT\n\n",
+        "body": "",
+        "statusCode": 200,
+        "responseTimeInMs": 3,
+        "elementType": "ZestResponse"
+      },
+      "assertions": [
+        {
+          "rootExpression": {
+            "code": 200,
+            "not": false,
+            "elementType": "ZestExpressionStatusCode"
+          },
+          "elementType": "ZestAssertion"
+        }
+      ],
+      "followRedirects": false,
+      "timestamp": 1652870542523,
+      "cookies": [],
+      "index": 4,
+      "enabled": true,
+      "elementType": "ZestRequest"
+    },
+    {
+      "url": "https://localhost:7000/viewer?lines\u003dnormal",
+      "data": "",
+      "method": "GET",
+      "headers": "DNT: 1\r\nUpgrade-Insecure-Requests: 1\r\nSec-Fetch-Dest: document\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-Site: same-origin\r\nSec-Fetch-User: ?1\r\n",
+      "response": {
+        "url": "http://localhost:7000/viewer?lines\u003dnormal",
+        "headers": "HTTP/1.0 200 OK\nContent-Type: text/html; charset\u003dutf-8\nContent-Length: 5795\nServer: Werkzeug/2.0.3 Python/3.7.8\nDate: Wed, 18 May 2022 10:42:24 GMT\n\n",
+        "body": "",
+        "statusCode": 200,
+        "responseTimeInMs": 4,
+        "elementType": "ZestResponse"
+      },
+      "assertions": [
+        {
+          "rootExpression": {
+            "code": 200,
+            "not": false,
+            "elementType": "ZestExpressionStatusCode"
+          },
+          "elementType": "ZestAssertion"
+        }
+      ],
+      "followRedirects": false,
+      "timestamp": 1652870544959,
+      "cookies": [],
+      "index": 5,
+      "enabled": true,
+      "elementType": "ZestRequest"
+    }
+  ],
+  "authentication": [],
+  "index": 0,
+  "enabled": true,
+  "elementType": "ZestScript"
+}

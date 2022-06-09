@@ -1,0 +1,132 @@
+{
+  "about": "This is a Zest script. For more details about Zest visit https://github.com/zaproxy/zest/",
+  "zestVersion": "0.3",
+  "title": "Client-side-restriction-bypass-2",
+  "description": "A template standalone script",
+  "prefix": "",
+  "type": "StandAlone",
+  "parameters": {
+    "tokenStart": "{{",
+    "tokenEnd": "}}",
+    "tokens": {},
+    "elementType": "ZestVariables"
+  },
+  "statements": [
+    {
+      "url": "https://localhost:4444/login",
+      "data": "username\u003dadmin\u0026password\u003dadmin",
+      "method": "POST",
+      "headers": "Content-Type: application/x-www-form-urlencoded\r\nContent-Length: 29\r\nOrigin: https://localhost:4444\r\nDNT: 1\r\nUpgrade-Insecure-Requests: 1\r\nSec-Fetch-Dest: document\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-Site: same-origin\r\nSec-Fetch-User: ?1\r\n",
+      "response": {
+        "url": "http://localhost:4444/login",
+        "headers": "HTTP/1.0 200 OK\nContent-Type: text/html; charset\u003dutf-8\nContent-Length: 4016\nVary: Cookie\nSet-Cookie: session\u003deyJsb2dnZWRpbiI6dHJ1ZSwidXNlcklkIjoxfQ.YotLcA.ZCjyBpTyP-86IwEWDEmbSEQ9RtU; HttpOnly; Path\u003d/\nServer: Werkzeug/2.0.3 Python/3.7.8\nDate: Mon, 23 May 2022 08:53:04 GMT\n\n",
+        "body": "",
+        "statusCode": 200,
+        "responseTimeInMs": 8,
+        "elementType": "ZestResponse"
+      },
+      "assertions": [
+        {
+          "rootExpression": {
+            "code": 200,
+            "not": false,
+            "elementType": "ZestExpressionStatusCode"
+          },
+          "elementType": "ZestAssertion"
+        }
+      ],
+      "followRedirects": false,
+      "timestamp": 1653295984835,
+      "cookies": [],
+      "index": 1,
+      "enabled": true,
+      "elementType": "ZestRequest"
+    },
+    {
+      "url": "https://localhost:4444/updatecolor",
+      "data": "color\u003dgreen",
+      "method": "POST",
+      "headers": "Content-Type: application/x-www-form-urlencoded\r\nContent-Length: 11\r\nOrigin: https://localhost:4444\r\nDNT: 1\r\nUpgrade-Insecure-Requests: 1\r\nSec-Fetch-Dest: document\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-Site: same-origin\r\nSec-Fetch-User: ?1\r\n",
+      "response": {
+        "url": "http://localhost:4444/updatecolor",
+        "headers": "HTTP/1.0 200 OK\nContent-Type: text/html; charset\u003dutf-8\nContent-Length: 4016\nVary: Cookie\nServer: Werkzeug/2.0.3 Python/3.7.8\nDate: Mon, 23 May 2022 08:53:08 GMT\n\n",
+        "body": "",
+        "statusCode": 200,
+        "responseTimeInMs": 6,
+        "elementType": "ZestResponse"
+      },
+      "assertions": [
+        {
+          "rootExpression": {
+            "code": 200,
+            "not": false,
+            "elementType": "ZestExpressionStatusCode"
+          },
+          "elementType": "ZestAssertion"
+        }
+      ],
+      "followRedirects": false,
+      "timestamp": 1653295988903,
+      "cookies": [],
+      "index": 2,
+      "enabled": true,
+      "elementType": "ZestRequest"
+    },
+    {
+      "url": "https://localhost:4444/updatefood",
+      "data": "food\u003dhacking",
+      "method": "POST",
+      "headers": "Content-Type: application/x-www-form-urlencoded\r\nContent-Length: 12\r\nOrigin: https://localhost:4444\r\nDNT: 1\r\nUpgrade-Insecure-Requests: 1\r\nSec-Fetch-Dest: document\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-Site: same-origin\r\nSec-Fetch-User: ?1\r\n",
+      "response": {
+        "url": "http://localhost:4444/updatefood",
+        "headers": "HTTP/1.0 200 OK\nContent-Type: text/html; charset\u003dutf-8\nContent-Length: 4016\nVary: Cookie\nServer: Werkzeug/2.0.3 Python/3.7.8\nDate: Mon, 23 May 2022 08:53:29 GMT\n\n",
+        "body": "",
+        "statusCode": 200,
+        "responseTimeInMs": 8,
+        "elementType": "ZestResponse"
+      },
+      "assertions": [
+        {
+          "rootExpression": {
+            "code": 200,
+            "not": false,
+            "elementType": "ZestExpressionStatusCode"
+          },
+          "elementType": "ZestAssertion"
+        }
+      ],
+      "followRedirects": false,
+      "timestamp": 1653296009323,
+      "cookies": [],
+      "index": 3,
+      "enabled": true,
+      "elementType": "ZestRequest"
+    },
+    {
+      "rootExpression": {
+        "regex": "\u003cb\u003ehacking\u003c/b\u003e",
+        "variableName": "response.body",
+        "caseExact": false,
+        "not": false,
+        "elementType": "ZestExpressionRegex"
+      },
+      "ifStatements": [
+        {
+          "message": "Client side restriction bypass - updatefood",
+          "priority": "HIGH",
+          "index": 5,
+          "enabled": true,
+          "elementType": "ZestActionFail"
+        }
+      ],
+      "elseStatements": [],
+      "index": 4,
+      "enabled": true,
+      "elementType": "ZestConditional"
+    }
+  ],
+  "authentication": [],
+  "index": 0,
+  "enabled": true,
+  "elementType": "ZestScript"
+}
