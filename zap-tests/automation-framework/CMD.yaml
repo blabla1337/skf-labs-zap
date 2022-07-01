@@ -1,0 +1,85 @@
+---
+env:
+  contexts:
+  - name: "skf-labs"
+    urls:
+    - "http://192.168.68.133:5000"
+    includePaths:
+    - "http://192.168.68.133:5000.*"
+    excludePaths: []
+    authentication:
+      parameters: {}
+      verification:
+        method: "response"
+        pollFrequency: 60
+        pollUnits: "requests"
+    sessionManagement:
+      method: "cookie"
+      parameters: {}
+  parameters:
+    failOnError: true
+    failOnWarning: false
+    progressToStdout: true
+  vars: {}
+jobs:
+- parameters:
+    action: "add"
+    type: "standalone"
+    engine: "Zest : Mozilla Zest"
+    name: "CMD.zst"
+    file: "/Users/riccardo.tencate/Desktop/skf-labs-zap/zap-tests/zest/CMD.zst"
+  name: "script"
+  type: "script"
+- parameters:
+    action: "run"
+    type: "standalone"
+    engine: "Zest : Mozilla Zest"
+    name: "CMD.zst"
+  name: "script"
+  type: "script"
+- parameters:
+    context: "skf-labs"
+    user: ""
+    policy: ""
+    maxRuleDurationInMins: 0
+    maxScanDurationInMins: 0
+  policyDefinition:
+    defaultStrength: "medium"
+    defaultThreshold: "medium"
+    rules:
+    - id: 90020
+      name: "Remote OS Command Injection"
+      threshold: "medium"
+      strength: "default"
+  name: "activeScan"
+  type: "activeScan"
+- parameters:
+    time: "3"
+    fileName: ""
+  name: "delay"
+  type: "delay"
+- parameters:
+    template: "traditional-html"
+    reportDir: "/Users/riccardo.tencate/Desktop/results"
+    reportFile: ""
+    reportTitle: "ZAP Scanning Report"
+    reportDescription: ""
+    displayReport: true
+  risks:
+  - "info"
+  - "low"
+  - "medium"
+  - "high"
+  confidences:
+  - "falsepositive"
+  - "low"
+  - "medium"
+  - "high"
+  - "confirmed"
+  sections:
+  - "instancecount"
+  - "alertdetails"
+  - "alertcount"
+  name: "report"
+  type: "report"
+

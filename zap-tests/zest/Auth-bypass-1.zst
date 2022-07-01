@@ -1,7 +1,7 @@
 {
-  "about": "This is a Zest script. For more details about Zest visit https://github.com/zaproxy/zest/",
+  "about": "This is a Zest script. For more details about Zest visit http://github.com/zaproxy/zest/",
   "zestVersion": "0.8",
-  "title": "Auth-bypass-1",
+  "title": "Auth-bypass-1.zst",
   "description": "",
   "prefix": "",
   "type": "StandAlone",
@@ -13,12 +13,12 @@
   },
   "statements": [
     {
-      "url": "https://localhost:7000/register",
+      "url": "http://192.168.68.133:5000/register",
       "data": "",
       "method": "GET",
       "headers": "DNT: 1\r\nUpgrade-Insecure-Requests: 1\r\nSec-Fetch-Dest: document\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-Site: same-origin\r\nSec-Fetch-User: ?1\r\n",
       "response": {
-        "url": "http://localhost:7000/register",
+        "url": "http://10.30.17.94:5000/register",
         "headers": "HTTP/1.0 200 OK\nContent-Type: text/html; charset\u003dutf-8\nContent-Length: 3765\nServer: Werkzeug/2.0.3 Python/3.7.8\nDate: Wed, 11 May 2022 08:28:49 GMT\n\n",
         "body": "",
         "statusCode": 200,
@@ -43,12 +43,12 @@
       "elementType": "ZestRequest"
     },
     {
-      "url": "https://localhost:7000/create",
+      "url": "http://192.168.68.133:5000/create",
       "data": "username\u003dabc\u0026password\u003dabc",
       "method": "POST",
-      "headers": "Content-Type: application/x-www-form-urlencoded\r\nContent-Length: 25\r\nOrigin: https://localhost:7000\r\nDNT: 1\r\nUpgrade-Insecure-Requests: 1\r\nSec-Fetch-Dest: document\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-Site: same-origin\r\nSec-Fetch-User: ?1\r\n",
+      "headers": "Content-Type: application/x-www-form-urlencoded\r\nContent-Length: 25\r\nOrigin: http://10.30.17.94:5000\r\nDNT: 1\r\nUpgrade-Insecure-Requests: 1\r\nSec-Fetch-Dest: document\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-Site: same-origin\r\nSec-Fetch-User: ?1\r\n",
       "response": {
-        "url": "http://localhost:7000/create",
+        "url": "http://10.30.17.94:5000/create",
         "headers": "HTTP/1.0 200 OK\nContent-Type: text/html; charset\u003dutf-8\nContent-Length: 3835\nServer: Werkzeug/2.0.3 Python/3.7.8\nDate: Wed, 11 May 2022 08:28:55 GMT\n\n",
         "body": "",
         "statusCode": 200,
@@ -73,12 +73,12 @@
       "elementType": "ZestRequest"
     },
     {
-      "url": "https://localhost:7000/login",
+      "url": "http://192.168.68.133:5000/login",
       "data": "username\u003dabc\u0026password\u003dabc",
       "method": "POST",
-      "headers": "Content-Type: application/x-www-form-urlencoded\r\nContent-Length: 25\r\nOrigin: https://localhost:7000\r\nDNT: 1\r\nUpgrade-Insecure-Requests: 1\r\nSec-Fetch-Dest: document\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-Site: same-origin\r\nSec-Fetch-User: ?1\r\n",
+      "headers": "Content-Type: application/x-www-form-urlencoded\r\nContent-Length: 25\r\nOrigin: http://10.30.17.94:5000\r\nDNT: 1\r\nUpgrade-Insecure-Requests: 1\r\nSec-Fetch-Dest: document\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-Site: same-origin\r\nSec-Fetch-User: ?1\r\n",
       "response": {
-        "url": "http://localhost:7000/login",
+        "url": "http://10.30.17.94:5000/login",
         "headers": "HTTP/1.0 200 OK\nContent-Type: text/html; charset\u003dutf-8\nContent-Length: 3427\nSet-Cookie: sessionid\u003da9993e364706816aba3e25717850c26c9cd0d89d; Path\u003d/\nServer: Werkzeug/2.0.3 Python/3.7.8\nDate: Wed, 11 May 2022 08:29:02 GMT\n\n",
         "body": "",
         "statusCode": 200,

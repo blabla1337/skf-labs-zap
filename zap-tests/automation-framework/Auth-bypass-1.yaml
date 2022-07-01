@@ -1,0 +1,52 @@
+---
+env:
+  contexts:
+  - name: "skf-labs"
+    urls:
+    - "http://192.168.68.133:5000"
+  parameters:
+    failOnError: true
+    failOnWarning: false
+    progressToStdout: true
+  vars: {}
+jobs:
+- parameters:
+    action: "add"
+    type: "standalone"
+    engine: "Mozilla Zest"
+    name: "Auth-bypass-1.zst"
+    file: "/Users/riccardo.tencate/Desktop/skf-labs-zap/zap-tests/zest/Auth-bypass-1.zst"
+  name: "script"
+  type: "script"
+- parameters:
+    action: "run"
+    type: "standalone"
+    engine: "Mozilla Zest"
+    name: "Auth-bypass-1.zst"
+    file: "/Users/riccardotencate/skf-labs-zap/zap-tests/zest/Auth-bypass-1.zst"
+  name: "script"
+  type: "script"
+- parameters:
+    time: "3"
+    fileName: ""
+  name: "delay"
+  type: "delay"
+- parameters:
+    template: "traditional-html"
+    reportDir: "/Users/riccardo.tencate/Desktop/results"
+    reportTitle: "ZAP Scanning Report"
+    reportDescription: ""
+    displayReport: true
+  risks:
+  - "high"
+  - "medium"
+  - "low"
+  - "info"
+  confidences:
+  - "high"
+  - "medium"
+  - "low"
+  - "falsepositive"
+  name: "report"
+  type: "report"
+

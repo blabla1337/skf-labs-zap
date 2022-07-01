@@ -1,0 +1,72 @@
+---
+env:
+  contexts:
+  - name: "skf-labs"
+    urls:
+    - "http://192.168.68.133:5000"
+    includePaths: []
+    excludePaths: []
+  parameters:
+    failOnError: true
+    failOnWarning: true
+    progressToStdout: true
+  vars: {}
+jobs:
+- parameters:
+    maxAlertsPerRule: 0
+    scanOnlyInScope: true
+    maxBodySizeInBytesToScan: 0
+    enableTags: false
+  rules:
+  - id: 10020
+    name: "Anti-clickjacking Header"
+    threshold: "high"
+  name: "passiveScan-config"
+  type: "passiveScan-config"
+- parameters:
+    action: "run"
+    type: "standalone.zst"
+    engine: "Zest : Mozilla Zest"
+    name: "Clickjacking"
+  name: "script"
+  type: "script"
+- parameters:
+    action: "add"
+    type: "standalone"
+    engine: "Zest : Mozilla Zest"
+    name: "Clickjacking.zst"
+    file: "/Users/riccardo.tencate/Desktop/skf-labs-zap/zap-tests/zest/Clickjacking.zst"
+  name: "script"
+  type: "script"
+- parameters:
+    maxDuration: 3
+  name: "passiveScan-wait"
+  type: "passiveScan-wait"
+- parameters:
+    time: "3"
+    fileName: ""
+  name: "delay"
+  type: "delay"
+- parameters:
+    template: "traditional-html"
+    reportDir: "/Users/riccardo.tencate/Desktop/results"
+    reportFile: ""
+    reportTitle: "ZAP Scanning Report"
+    reportDescription: ""
+    displayReport: true
+  risks:
+  - "low"
+  - "medium"
+  - "high"
+  confidences:
+  - "low"
+  - "medium"
+  - "high"
+  - "confirmed"
+  sections:
+  - "instancecount"
+  - "alertdetails"
+  - "alertcount"
+  name: "report"
+  type: "report"
+

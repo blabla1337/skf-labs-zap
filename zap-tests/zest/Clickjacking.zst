@@ -1,7 +1,7 @@
 {
   "about": "This is a Zest script. For more details about Zest visit https://github.com/zaproxy/zest/",
   "zestVersion": "0.3",
-  "title": "Clickjacking",
+  "title": "Clickjacking.zst",
   "description": "A template standalone script",
   "prefix": "",
   "type": "StandAlone",
@@ -13,12 +13,12 @@
   },
   "statements": [
     {
-      "url": "https://localhost:7000/",
+      "url": "http://192.168.68.133:5000/",
       "data": "",
       "method": "GET",
       "headers": "DNT: 1\r\nUpgrade-Insecure-Requests: 1\r\nSec-Fetch-Dest: document\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-Site: cross-site\r\n",
       "response": {
-        "url": "http://localhost:7000/",
+        "url": "http://192.168.68.133:5000/",
         "headers": "HTTP/1.0 200 OK\nContent-Type: text/html; charset\u003dutf-8\nContent-Length: 4009\nServer: Werkzeug/2.0.3 Python/3.7.8\nDate: Mon, 23 May 2022 09:32:08 GMT\n\n",
         "body": "",
         "statusCode": 200,

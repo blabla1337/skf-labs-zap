@@ -13,12 +13,12 @@
   },
   "statements": [
     {
-      "url": "https://localhost:7000/",
+      "url": "http://192.168.68.133:5000/",
       "data": "",
       "method": "GET",
       "headers": "DNT: 1\r\nUpgrade-Insecure-Requests: 1\r\nSec-Fetch-Dest: document\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-Site: none\r\nSec-Fetch-User: ?1\r\n",
       "response": {
-        "url": "http://localhost:7000/",
+        "url": "http://192.168.68.133:5000/",
         "headers": "HTTP/1.0 200 OK\nContent-Type: text/html; charset\u003dutf-8\nContent-Length: 3579\nServer: Werkzeug/2.0.3 Python/3.7.8\nDate: Tue, 17 May 2022 11:21:13 GMT\n\n",
         "body": "",
         "statusCode": 200,
@@ -43,12 +43,12 @@
       "elementType": "ZestRequest"
     },
     {
-      "url": "https://localhost:7000/login",
+      "url": "http://192.168.68.133:5000/login",
       "data": "username\u003dadmin\u0026password\u003dadmin",
       "method": "POST",
-      "headers": "Content-Type: application/x-www-form-urlencoded\r\nContent-Length: 29\r\nOrigin: https://localhost:7000\r\nDNT: 1\r\nUpgrade-Insecure-Requests: 1\r\nSec-Fetch-Dest: document\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-Site: same-origin\r\nSec-Fetch-User: ?1\r\n",
+      "headers": "Content-Type: application/x-www-form-urlencoded\r\nContent-Length: 29\r\nOrigin: http://192.168.68.133:5000\r\nDNT: 1\r\nUpgrade-Insecure-Requests: 1\r\nSec-Fetch-Dest: document\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-Site: same-origin\r\nSec-Fetch-User: ?1\r\n",
       "response": {
-        "url": "http://localhost:7000/login",
+        "url": "http://192.168.68.133:5000/login",
         "headers": "HTTP/1.0 200 OK\nContent-Type: text/html; charset\u003dutf-8\nContent-Length: 2971\nSet-Cookie: userId\u003d1; Path\u003d/\nVary: Cookie\nSet-Cookie: session\u003deyJsb2dnZWRpbiI6dHJ1ZX0.YoOFLQ.4-z-JA6-lBATy7PG_4XH8e-1Yu4; HttpOnly; Path\u003d/\nServer: Werkzeug/2.0.3 Python/3.7.8\nDate: Tue, 17 May 2022 11:21:17 GMT\n\n",
         "body": "",
         "statusCode": 200,
@@ -73,12 +73,12 @@
       "elementType": "ZestRequest"
     },
     {
-      "url": "https://localhost:7000/login",
+      "url": "http://192.168.68.133:5000/login",
       "data": "",
       "method": "GET",
       "headers": "DNT: 1\r\nUpgrade-Insecure-Requests: 1\r\nSec-Fetch-Dest: document\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-Site: none\r\nSec-Fetch-User: ?1\r",
       "response": {
-        "url": "http://localhost:7000/login",
+        "url": "http://192.168.68.133:5000/login",
         "headers": "HTTP/1.0 200 OK\nContent-Type: text/html; charset\u003dutf-8\nContent-Length: 2971\nServer: Werkzeug/2.0.3 Python/3.7.8\nDate: Tue, 17 May 2022 11:21:19 GMT\n\n",
         "body": "",
         "statusCode": 200,
@@ -99,7 +99,7 @@
       "timestamp": 1652786479593,
       "cookies": [
         {
-          "domain": "https://localhost:7000",
+          "domain": "http://192.168.68.133:5000",
           "name": "sad",
           "value": "sad",
           "path": "/login",
